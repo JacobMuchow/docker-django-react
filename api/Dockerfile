@@ -10,3 +10,5 @@ WORKDIR /app/api
 ADD requirements.txt /app/api
 RUN pip install -r requirements.txt
 ADD . /app/api
+
+CMD ["django-admin", "startproject", "project"]
