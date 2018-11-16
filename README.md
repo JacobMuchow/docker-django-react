@@ -15,3 +15,18 @@ The repo is a little messy right now, but at the end I will clean it up and shar
 [Django/Rest w/ React](https://www.valentinog.com/blog/tutorial-api-django-rest-react/#Django_REST_with_React_setting_up_the_controll_ehm_the_views) -- Currently in progress on this one on the `react-template` branch. I think is close to what I'm wanting so far. More notes to come.
 
 [React + Redux + Webpack 3 + Django](https://blog.cloudboost.io/react-redux-webpack-3-django-nov-2017-53a09d09cf75?gi=e2e794d38ae2) -- my friend recommended this one, going to look into it next.
+
+----------
+
+# Tips
+
+Attach to running container in bash prompt:
+```
+docker-compose run <container> /bin/bash
+```
+
+Check Django code coverage:
+```
+coverage run --source='.' manage.py test
+coverage report
+```
