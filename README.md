@@ -25,8 +25,29 @@ Attach to running container in bash prompt:
 docker-compose run <container> /bin/bash
 ```
 
+To initialize a Django project & apps:
+```
+> (in container bash)
+> django-admin startproject <project_name>
+> cd project
+> django-admin startapp <app_name>
+```
+
+NOTE: Make sure to add `<app_name>` to `INSTALLED_APPS` in `settings.py`.
+
+Create and run database migrations:
+```
+> python manage.py makemigrations <app_name> (leads)
+> python manage.py migrate
+```
+
+Load fixtures (database seeding):
+```
+> python manage.py loaddata leads
+```
+
 Check Django code coverage:
 ```
-coverage run --source='.' manage.py test
-coverage report
+> coverage run --source='.' manage.py test
+> coverage report
 ```
