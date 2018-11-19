@@ -20,6 +20,10 @@ RUN apt-get install -y nodejs
 WORKDIR /app/app
 COPY requirements.txt /app/app
 RUN pip install -r requirements.txt
+
+COPY package*.json /app/app/
+RUN npm install -qy
+
 COPY . /app/app
 
 WORKDIR /app/app/project
